@@ -24,7 +24,7 @@ catch (PDOException $ex)
 function getThreads() {
 
     global $db;
-    $sql = 'SELECT thread_title, thread_id FROM simple_imageboard.thread ORDER BY recent_post_date';  
+    $sql = 'SELECT thread_title, thread_id FROM thread ORDER BY recent_post_date';  
     $stmt = $db->query($sql);
 
     $stmt->execute(); 
@@ -37,7 +37,7 @@ function getThreads() {
 
 function getMessages($threadId) {
     global $db;
-    $sql = 'SELECT message_body, user_email, message_date FROM simple_imageboard.message WHERE thread_id=:threadId ORDER BY message_date';
+    $sql = 'SELECT message_body, user_email, message_date FROM message WHERE thread_id=:threadId ORDER BY message_date';
     $stmt = $db->prepare($sql);
     $stmt->bindValue(":threadId", $threadId, PDO::PARAM_INT);
     $stmt->execute();
