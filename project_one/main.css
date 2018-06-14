@@ -1,0 +1,40 @@
+body {
+    background-color: #053684;
+}
+header {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.thread-title {
+    margin: 20px;
+    background-color: white;
+    padding: 15px;
+}
+
+main article {
+    margin: 20px;
+    background-color: white;
+    padding: 15px;
+    min-height: 125px;
+}
+
+main article a {
+    color: #053684;
+}
+
+main article h2, h3, h4, h5, h6 {
+    display: inline;
+    clear: right;
+}
+
+main article h3, h4 {
+    float: right;
+    font-size: 14px;
+}
+
+main a {
+    color: white;
+    margin: 30px;
+    margin-top: 50px;
+}
